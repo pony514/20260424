@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>我的程式種子 - 時光記憶圖譜</title>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+  <style>
+    body { margin: 0; padding: 0; display: flex; overflow: hidden; font-family: "Microsoft JhengHei", sans-serif; }
+    /* 左側選單區域：固定寬度 */
+    #canvas-container { width: 300px; height: 100vh; border-right: 1px solid #ddd; background: #fdfdf5; }
+    /* 右側主顯示區域：自動填滿剩餘空間 */
+    #portfolio-container { flex-grow: 1; height: 100vh; position: relative; background: #fff; }
+    #portfolio-frame { width: 100%; height: 100%; border: none; }
+    .hint { position: absolute; bottom: 15px; left: 15px; color: #888; pointer-events: none; z-index: 10; }
+  </style>
+</head>
+<body>
+  <div id="canvas-container">
+    <!-- p5.js 畫布會注入於此 -->
+  </div>
+  
+  <div id="portfolio-container">
+    <div class="hint">← 點擊左側「學習種子」來查看各週作品</div>
+    <iframe id="portfolio-frame" name="portfolio-frame" src="about:blank"></iframe>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
